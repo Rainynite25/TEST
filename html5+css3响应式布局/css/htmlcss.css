@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding: 0;
+    text-align: center;
+    font-size: 30px;
+}
+/*对头部中部底部进行通用样式设置*/
+#head,#foot,#main{
+    height: 100px;
+    width: 1200px;
+    background: #666;
+    margin: 0 auto;
+    line-height: 100px;
+    min-width: 320px;
+}
+/*中间样式设置*/
+#main{
+    height: auto;
+    margin: 10px auto;
+    overflow: hidden;
+}
+/*对上中下进行设置*/
+.center,.left,.right{
+    height: 600px;
+    line-height: 600px;
+    background: darkred;
+    width: 20%;
+    float: left;
+}
+/*单独对中部进行设置*/
+.center{
+    width: 60%;
+    border-right: 10px solid #ffffff;
+    border-left: 10px solid #ffffff;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px){
+    #head,#foot,#main{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 980px){
+   .right{
+       display: none;
+   }
+    .left{
+        width: 30%;
+    }
+    .center{
+        border-right: hidden;
+        width: 70%;
+    }
+}
+@media screen and (max-width: 640px){
+    .right,.left,.center{
+        width: 100%;
+        height: 200px;
+        line-height: 200px;
+        display: block;
+    }
+    .center{
+        border: none;
+        border-top: 10px #ffffff solid;
+        border-bottom: 10px #ffffff solid;
+        height: 600px;
+    }
+}
